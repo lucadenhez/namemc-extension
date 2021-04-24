@@ -1,42 +1,18 @@
 console.log("[NameMC Extension] Detected profile page, waiting for load of DOM elements...")
 
-//function addDate(callback) {
-    //var findElement = setInterval(function() {
-        //var element = document.getElementsByClassName("col-md-6 col-lg-7 col-xl-8 order-md-2")
-        //if (element.length > 0) {
-            //console.log("[NameMC Extension] Element loaded!");
-            //console.log("[NameMC Extension] Getting account creation date for [name]...");
-            //clearInterval(findElement);
-            //callback(0);
-        //}
-        //else {
-            //console.log("[NameMC Extension] Can't find element. Retrying...")
-        //}
-    //}, 100);  
-//}
-
-
-//addDate(function(value) {
-    //console.log("[NameMC Extension] Created element!")
-    //var viewsElement = document.getElementsByClassName("row no-gutters");
-    //var clonedElement = viewsElement.cloneNode(true);
-    
-    //document.getElementsByClassName("card-body py-1")[0].appendChild(clonedElement);
-//});
-
-
+var i = 0;
 
 var t = setInterval(function () {
     var group = document.getElementsByClassName("card-body py-1");
     if (group.length > 0) { 
         clearInterval(t);
-        console.log("[NameMC Extension] Found element!");
+        console.log("[NameMC Extension] Found grouping box!");
         var username = document.getElementsByTagName('h1');
 
         if (username.length > 0) {
             username = document.getElementsByTagName('h1')[0].innerHTML;
 
-            console.log("[NameMC Extension] Found username " + username);
+            console.log("[NameMC Extension] Found username: " + username);
             console.log("[NameMC Extension] Getting creation date...");
     
             var viewsElement = document.getElementsByClassName("row no-gutters")[4];
@@ -62,7 +38,7 @@ var t = setInterval(function () {
                     
                 }
                 else if (this.readyState == 4 && this.status != 200) {
-                    console.log("[NameMC Extension] Couldn't find date. Aborting... ");
+                    console.log("[NameMC Extension] Couldn't find date.");
                     clonedElement2.innerHTML = "Not Available";
                 }
             };
@@ -70,11 +46,12 @@ var t = setInterval(function () {
             xhr.send();
         }
         else {
-            console.log("[NameMC Extension] Couldn't find username. Aborting... ");
+            console.log("[NameMC Extension] Couldn't find username. ");
             clonedElement2.innerHTML = "Not Available";
         }
     }
     else {
-        console.log("[NameMC Extension] Can't find element. Retrying...")
+        i++;
+        console.log("[NameMC Extension] [" + i.toString() + "] Can't find grouping box. Retrying...");
     }
   }, 100);
