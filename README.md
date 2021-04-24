@@ -22,3 +22,5 @@ I'm planning to try and release this on the Chrome store, but first I need to as
 Cheers to **CoderTim** for building the awesome Minecraft website, **NameMc.** And a special thanks to the creator of the API, **https://api.ashcon.app/mojang/v2/user/**, for easy access to account creation dates, and _no CORs!_
 
 # This was written in JavaScript.
+
+I am not very good please don't verbally abuse me
