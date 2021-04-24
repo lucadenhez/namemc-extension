@@ -16,3 +16,9 @@ This extension can **only access the namemc.com domain**. All other domains will
 I'm planning to try and release this on the Chrome store, but first I need to ask CoderTim to see if this project is okay.
 
 **CoderTim**, if you're seeing this and do not approve of it, please contact me at my _Discord:_ **lucaa#4787**.
+
+# Credits
+
+Cheers to **CoderTim** for building the awesome Minecraft website, **NameMc.** And a special thanks to the creator of the API, **https://api.ashcon.app/mojang/v2/user/**, for easy access to account creation dates, and _no CORs!_
+
+# This was written in JavaScript.
