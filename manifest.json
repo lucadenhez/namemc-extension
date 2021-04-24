@@ -1,7 +1,7 @@
 {
     "name" : "NameMC Account Creation Extension",
     "description" : "Chrome extension to add account creation date on NameMC!",
-    "version" : "1.4",
+    "version" : "1.1",
     "manifest_version" : 2,
     "content_scripts" : [
         {
